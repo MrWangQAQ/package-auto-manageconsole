@@ -14,5 +14,9 @@
   "dependencies": {
     "archiver": "^5.3.0",
     "crypto": "^1.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://120.92.21.127:11080/lib/package-auto-manageconsole.git"
   }
 }
