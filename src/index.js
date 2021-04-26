@@ -40,10 +40,4 @@ function packageAutoManageconsole ({fileName, staticPath, outputPath}) {
   })
 }
 
-packageAutoManageconsole({
-  fileName: 'oppo-mobile-platform',
-  staticPath: path.join(__dirname, '../..', 'oppo-mobile-platform'),
-  outputPath: path.join(__dirname, '../..')
-})
-
 module.exports = packageAutoManageconsole
