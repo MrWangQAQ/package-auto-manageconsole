@@ -23,7 +23,7 @@ function packageAutoManageconsole ({fileName, staticPath, outputPath}) {
       const md5 = crypto.createHash('md5')
       const compressMd5 = md5.update(compressContent).digest('hex')
       const md5sum = fs.createWriteStream(`${limitFilePath}/md5sum.txt`)
-      md5sum.write(`${compressMd5} ${fileName}`)
+      md5sum.write(`${compressMd5} ${fileName}.zip`)
       md5sum.close()
       toCompress({
         fileName,
