@@ -45,4 +45,4 @@ function packageAutoManageconsole ({fileName, staticPath, outputPath}) {
 }
 
 module.exports = packageAutoManageconsole
-module.exports.webpackPlugin = webpackPlugin
+module.exports.webpackPlugin = webpackPlugin(packageAutoManageconsole)
