@@ -35,7 +35,7 @@ function packageAutoManageconsole ({fileName, staticPath, outputPath}) {
         staticPath: limitFilePath
       })
       .then(() => {
-        console.log('\x1B[32m%s\x1B[39m', '✅ 客开部署zip包生成成功！')
+        console.log('\x1B[32m%s\x1B[39m', `✅ 客开部署${fileName}.zip包生成成功！`)
         delDir(limitFilePath)
       })
       .catch(() => {
