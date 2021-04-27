@@ -7,6 +7,7 @@ function webpackPlugin(options) {
 }
 
 webpackPlugin.prototype.apply = function(compiler) {
+	const options = this.options
 	compiler.hooks.afterEmit.tapAsync(webpackPlugin.name, function(compilation, callback) {
         packageAutoManageconsole({
             fileName: options.fileName, // 输出zip 文件名
