@@ -2,9 +2,13 @@ const toCompress = require('./lib/toCompress')
 const fs = require("fs")
 const crypto = require('crypto')
 const delDir = require('./lib/deleteFile')
-const path = require('path')
+const webpackPlugin = require('./webpackPlugin')
 
 function packageAutoManageconsole ({fileName, staticPath, outputPath}) {
+  if (!fileName) {
+    console.error('fileName 为空！')
+    return
+  }
   const limitFileName = `${fileName}_limit`
   const limitFilePath = `${outputPath}/${limitFileName}`
   fs.access(limitFilePath, fs.constants.F_OK, (err) => {
@@ -41,3 +45,4 @@ function packageAutoManageconsole ({fileName, staticPath, outputPath}) {
 }
 
 module.exports = packageAutoManageconsole
+module.exports.webpackPlugin = webpackPlugin
