@@ -40,7 +40,7 @@ function toCompress ({fileName, type = 'zip', outputPath, staticPath = ''}) {
 
     archive.pipe(output)
 
-    archive.directory(`${staticPath}/`, fileName)
+    archive.directory(`${staticPath}/`, false)
 
     archive.finalize()
   })
